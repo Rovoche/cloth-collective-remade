@@ -1,23 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { ArrowRight, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — The Up-Cycled Cloth Collective" },
-      {
-        name: "description",
-        content:
-          "Reach out about community membership, workshops, partnerships, speaking engagements or media — or just say hello.",
-      },
-      { property: "og:image", content: img.workshop1 },
-    ],
-  }),
-  component: ContactPage,
-});
 
 const options = [
   { t: "General Enquiries", b: "Questions, ideas or anything in between." },
@@ -179,3 +165,5 @@ function Field({
     </div>
   );
 }
+
+export default ContactPage;

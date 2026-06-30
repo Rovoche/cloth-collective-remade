@@ -1,23 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/blog")({
-  head: () => ({
-    meta: [
-      { title: "Blog — The Up-Cycled Cloth Collective" },
-      {
-        name: "description",
-        content:
-          "Thoughtful articles, practical ideas, creative projects and inspiring stories from a global community transforming textile waste.",
-      },
-      { property: "og:image", content: img.blog1 },
-    ],
-  }),
-  component: BlogPage,
-});
 
 const categories = [
   "All",
@@ -215,3 +201,5 @@ function BlogPage() {
     </SiteLayout>
   );
 }
+
+export default BlogPage;

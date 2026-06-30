@@ -1,23 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/learning")({
-  head: () => ({
-    meta: [
-      { title: "Learning Library — The Up-Cycled Cloth Collective" },
-      {
-        name: "description",
-        content:
-          "Practical learning experiences to repair, redesign and reimagine textiles through craftsmanship and sustainable thinking.",
-      },
-      { property: "og:image", content: img.workshop2 },
-    ],
-  }),
-  component: LearningPage,
-});
 
 const featured = [
   {
@@ -207,3 +193,5 @@ function LearningPage() {
     </SiteLayout>
   );
 }
+
+export default LearningPage;
