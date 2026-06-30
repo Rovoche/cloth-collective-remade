@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { img } from "@/lib/images";
 
-const nav = [
+const nav: { to: string; label: string; end?: boolean }[] = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
   { to: "/learning", label: "Learning Library" },
@@ -11,7 +11,7 @@ const nav = [
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
   { to: "/donate", label: "Donate" },
-] as const;
+];
 
 export function Header({ transparent = false }: { transparent?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
