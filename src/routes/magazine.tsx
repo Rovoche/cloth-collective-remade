@@ -1,23 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/magazine")({
-  head: () => ({
-    meta: [
-      { title: "Magazine — The Up-Cycled Cloth Collective" },
-      {
-        name: "description",
-        content:
-          "Premium digital publications celebrating creativity, sustainable making and inspiring people transforming textile waste.",
-      },
-      { property: "og:image", content: img.magazineMay },
-    ],
-  }),
-  component: MagazinePage,
-});
 
 const archive = [
   { cover: img.magazineMay, title: "Volume IX · May 2026", tag: "Latest" },
@@ -168,3 +154,5 @@ function MagazinePage() {
     </SiteLayout>
   );
 }
+
+export default MagazinePage;

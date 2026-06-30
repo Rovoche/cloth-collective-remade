@@ -1,23 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "The Up-Cycled Cloth Collective — Every garment has another story" },
-      {
-        name: "description",
-        content:
-          "A global community transforming textile waste into creativity, learning and lasting environmental impact.",
-      },
-      { property: "og:image", content: img.homepageCover },
-    ],
-  }),
-  component: Home,
-});
 
 const stats = [
   { n: "12,000+", l: "Global Community" },
@@ -403,3 +389,5 @@ function Home() {
     </SiteLayout>
   );
 }
+
+export default Home;

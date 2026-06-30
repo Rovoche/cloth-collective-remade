@@ -1,23 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
 import { img } from "@/lib/images";
 
-export const Route = createFileRoute("/donate")({
-  head: () => ({
-    meta: [
-      { title: "Support the Collective — The Up-Cycled Cloth Collective" },
-      {
-        name: "description",
-        content:
-          "Support a global movement reimagining textile waste through education, workshops and community.",
-      },
-      { property: "og:image", content: img.melanieGroup },
-    ],
-  }),
-  component: DonatePage,
-});
 
 const tiers = [
   { amount: "$25", label: "Maker", body: "Supports learning materials for one new member." },
@@ -79,3 +65,5 @@ function DonatePage() {
     </SiteLayout>
   );
 }
+
+export default DonatePage;

@@ -1,17 +1,17 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { img } from "@/lib/images";
 
-const nav = [
-  { to: "/", label: "Home" },
+const nav: { to: string; label: string; end?: boolean }[] = [
+  { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
   { to: "/learning", label: "Learning Library" },
   { to: "/magazine", label: "Magazine" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
   { to: "/donate", label: "Donate" },
-] as const;
+];
 
 export function Header({ transparent = false }: { transparent?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
@@ -50,17 +50,18 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
 
         <nav className="hidden items-center justify-center gap-8 lg:flex">
           {nav.map((n) => (
-            <Link
+            <NavLink
               key={n.to}
               to={n.to}
-              className={`text-[13px] tracking-wide transition-colors hover:text-olive ${
-                solid ? "text-charcoal" : "text-ivory/90"
-              }`}
-              activeProps={{ className: "text-olive" }}
-              activeOptions={{ exact: n.to === "/" }}
+              end={n.end}
+              className={({ isActive }) =>
+                `text-[13px] tracking-wide transition-colors hover:text-olive ${
+                  isActive ? "text-olive" : solid ? "text-charcoal" : "text-ivory/90"
+                }`
+              }
             >
               {n.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
