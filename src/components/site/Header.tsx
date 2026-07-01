@@ -65,8 +65,9 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
               className="h-12 w-12 flex-shrink-0 object-contain drop-shadow-sm lg:h-14 lg:w-14"
             />
             <span
-              className={`font-display text-sm leading-snug transition-colors lg:text-base ${
-                solid ? "text-ink" : "text-ivory drop-shadow-md"
+              style={!solid ? { textShadow: "0 1px 8px rgba(0,0,0,0.7)" } : {}}
+            className={`font-display text-sm leading-snug transition-colors lg:text-base ${
+                solid ? "text-ink" : "text-ivory"
               }`}
             >
               The Up-Cycled
@@ -84,8 +85,9 @@ export function Header({ transparent = false }: { transparent?: boolean }) {
                 end={n.end}
                 className={({ isActive }) =>
                   `text-[13px] tracking-wide transition-colors hover:text-olive ${
-                    isActive ? "text-olive font-medium" : solid ? "text-charcoal" : "text-ivory/90"
-                  }`
+                    isActive ? "text-olive font-medium" : solid ? "text-charcoal" : "text-ivory"
+                  }`}
+                style={!solid ? { textShadow: "0 1px 6px rgba(0,0,0,0.65)" } : {}
                 }
               >
                 {n.label}
