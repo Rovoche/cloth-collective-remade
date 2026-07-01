@@ -20,10 +20,10 @@ export function StatNumber({ raw, className = "" }: Props) {
   const { value, prefix, suffix } = parse(raw);
   const { count, ref } = useCountUp(value, 1600);
 
-  // Format with commas if original had them
+  // Format with commas if original had them — explicit en-US prevents compact notation (e.g. "286.0K")
   const formatted =
     raw.includes(",")
-      ? count.toLocaleString()
+      ? count.toLocaleString("en-US")
       : String(count);
 
   return (
