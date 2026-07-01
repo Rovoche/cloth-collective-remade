@@ -60,8 +60,8 @@ function Home() {
           className="absolute inset-0 kenburns bg-cover bg-center"
           style={{ backgroundImage: `url(${img.homepageCover})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/15 to-ink/55" />
-        <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 pt-32 text-ivory lg:px-12 lg:pb-28">
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/10 to-ink/60" />
+        <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 pt-20 text-ivory lg:px-12 lg:pb-28">
           <div className="max-w-3xl fade-up">
             <p className="eyebrow text-ivory/80">
               <span className="rule bg-ivory/60" />A Global Textile Movement
@@ -117,11 +117,11 @@ function Home() {
 
           <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-border md:grid-cols-3">
             {stats.map((s, i) => (
-              <Reveal key={s.l} delay={i * 60} className="bg-ivory p-8 md:p-10">
-                <p className="font-display text-5xl text-forest md:text-6xl">
+              <Reveal key={s.l} delay={i * 60} className="bg-ivory p-5 md:p-8 lg:p-10">
+                <p className="font-display text-[clamp(1.75rem,5vw,3.5rem)] leading-none text-forest">
                   <StatNumber raw={s.n} />
                 </p>
-                <p className="mt-4 text-xs uppercase tracking-[0.22em] text-charcoal/70">
+                <p className="mt-3 text-[10px] uppercase tracking-[0.18em] text-charcoal/70 md:text-xs md:tracking-[0.22em]">
                   {s.l}
                 </p>
               </Reveal>
