@@ -60,22 +60,28 @@ function Home() {
           className="absolute inset-0 kenburns bg-cover bg-center"
           style={{ backgroundImage: `url(${img.homepageCover})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/10 to-ink/60" />
-        <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 pt-20 text-ivory lg:px-12 lg:pb-28">
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/10 to-ink/65" />
+
+        {/* Eyebrow — pinned top, clears fixed header (80px mobile, 88px desktop) */}
+        <div className="absolute inset-x-0 top-0 z-10 mx-auto max-w-[1400px] px-6 pt-[88px] lg:px-12 lg:pt-[96px]">
+          <p className="eyebrow text-ivory/80" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}>
+            <span className="rule bg-ivory/60" />A Global Textile Movement
+          </p>
+        </div>
+
+        {/* Main content — pinned bottom */}
+        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-6 pb-20 lg:px-12 lg:pb-28">
           <div className="max-w-3xl fade-up">
-            <p className="eyebrow text-ivory/80">
-              <span className="rule bg-ivory/60" />A Global Textile Movement
-            </p>
-            <h1 className="mt-6 font-display text-[clamp(2.5rem,7vw,5.75rem)] leading-[1.02] text-ivory">
+            <h1 className="font-display text-[clamp(2.4rem,5.5vw,4.75rem)] leading-[1.05] text-ivory" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.35)" }}>
               Every garment has<br />
               <em className="font-normal italic">another story</em> to tell.
             </h1>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/85 md:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/85 md:text-lg">
               The Up-Cycled Cloth Collective is a global community transforming textile
               waste into creativity, learning and lasting environmental impact through
               education, collaboration and the power of making.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
                 className="group inline-flex items-center gap-2 rounded-full bg-ivory px-7 py-3.5 text-sm font-medium text-ink transition-all hover:bg-cream"
@@ -91,7 +97,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="mt-16 flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ivory/60">
+          <div className="mt-10 flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ivory/60">
             <ArrowDown className="h-4 w-4 animate-bounce" />
             Scroll to begin
           </div>
