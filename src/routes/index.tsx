@@ -61,10 +61,10 @@ function Home() {
           style={{ backgroundImage: `url(${img.homepageCover})` }}
         />
         {/* stronger dark at top so header items always readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-transparent to-ink/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/65 via-ink/35 to-ink/75" />
 
         {/* All content pinned to bottom — single block, nothing floats near the header */}
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12 lg:pb-28">
+        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-5 pb-[28%] sm:px-8 sm:pb-20 lg:px-12 lg:pb-28">
           <div className="max-w-2xl fade-up">
             {/* Eyebrow lives here, safely in the bottom block */}
             <p className="mb-5 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.25em] text-ivory/70">
