@@ -7,12 +7,12 @@ import { img } from "@/lib/images";
 
 
 const stats = [
-  { n: "12,000+", l: "Global Community" },
-  { n: "48", l: "Countries Reached" },
+  { n: "286,000+", l: "Global Community" },
+  { n: "100+", l: "Countries Reached" },
   { n: "200+", l: "Educational Resources" },
   { n: "36", l: "Magazine Editions" },
   { n: "500+", l: "Workshops Hosted" },
-  { n: "15", l: "Years of Impact" },
+  { n: "10", l: "Years of Impact" },
 ];
 
 const courses = [
