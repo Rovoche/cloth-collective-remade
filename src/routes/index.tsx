@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
+import { StatNumber } from "@/components/site/StatNumber";
 import { img } from "@/lib/images";
 
 
@@ -117,7 +118,9 @@ function Home() {
           <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-border md:grid-cols-3">
             {stats.map((s, i) => (
               <Reveal key={s.l} delay={i * 60} className="bg-ivory p-8 md:p-10">
-                <p className="font-display text-5xl text-forest md:text-6xl">{s.n}</p>
+                <p className="font-display text-5xl text-forest md:text-6xl">
+                  <StatNumber raw={s.n} />
+                </p>
                 <p className="mt-4 text-xs uppercase tracking-[0.22em] text-charcoal/70">
                   {s.l}
                 </p>
